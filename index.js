@@ -1755,6 +1755,15 @@ QuickBooks.prototype.findExchangeRates = function(criteria, callback) {
   })
 }
 
+/**
+ * Retrieves the AccountList Report from QuickBooks
+ *
+ * @param  {object} options - (Optional) Map of key-value pairs passed as options to the Report
+ * @param  {function} callback - Callback function which is called with any error and the AccountList Report
+ */
+QuickBooks.prototype.reportAccountList= function(options, callback) {
+  module.report(this, 'AccountList', options, callback)
+}
 
 /**
  * Retrieves the BalanceSheet Report from QuickBooks
